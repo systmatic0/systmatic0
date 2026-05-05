@@ -36,9 +36,3 @@ Product Design   →   End-to-end UX from research to shipped product
 Design × Eng     →   Figma-to-code automation & handoff workflows
 AI-augmented     →   Claude, Midjourney
 ```
-
----
-
-<div align="center">
-  <sub>👀 &nbsp;<img src="https://profile-counter.glitch.me/systmatic0/count.svg" alt="Visitor Count" />&nbsp; profile views</sub>
-</div>
