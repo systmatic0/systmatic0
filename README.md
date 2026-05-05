@@ -1,10 +1,21 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Karl+%F0%9F%91%8B;Lead+Product+Designer;Design+Systems+%E2%86%92+at+scale;Where+pixels+meet+purpose." alt="Typing SVG" />
+ _   _      _ _         _   _                                     _                     
+| | | |    | | |       | | | |                                   | |                    
+| |_| | ___| | | ___   | |_| |__   ___ _ __ ___    _____  ___ __ | | ___  _ __ ___ _ __ 
+|  _  |/ _ \ | |/ _ \  | __| '_ \ / _ \ '__/ _ \  / _ \ \/ / '_ \| |/ _ \| '__/ _ \ '__|
+| | | |  __/ | | (_) | | |_| | | |  __/ | |  __/ |  __/>  <| |_) | | (_) | | |  __/ |_  
+\_| |_/\___|_|_|\___/   \__|_| |_|\___|_|  \___|  \___/_/\_\ .__/|_|\___/|_|  \___|_(_) 
+                                                           | |                          
+                                                           |_|                          
 
 <br/>
 
-<p>Product designer who codes. I build design systems, ship user-centric products,<br/>and close the gap between design and engineering.<br/><br/>Based in <b>Tallinn, Estonia</b> — been designing for two <b>#EstonianMafia</b> startups.</p>
+<p>My name is Karl, I do product design and web development. On my journey, I've led design process for user-centric products and design systems.</p>
+<br/>
+<p>(Been designing for two <a href="https://www.lift99.co/walloffame" target="_blank">#EstonianMafia</a> startups.)</p>
+
+
 
 <br/>
 
