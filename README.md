@@ -23,7 +23,7 @@
 ```
 Design Systems   →   Tokens, components, governance, documentation
 Product Design   →   End-to-end UX from research to shipped product
-Design × Eng     →   Figma-to-code automation & handoff workflows
+Design × Eng     →   Figma-to-code automation, React, HTML, CSS
 AI-augmented     →   Claude, Midjourney
 ```
 
