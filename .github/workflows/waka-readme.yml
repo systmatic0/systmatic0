@@ -1,0 +1,76 @@
+name: Waka Readme
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-readme:
+    name: Update WakaTime README section
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Fetch WakaTime language stats
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          set -e
+          auth=$(printf "%s:" "$WAKATIME_API_KEY" | base64)
+          response=$(curl -sSf -H "Authorization: Basic $auth" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
+          echo "$response" > waka_response.json
+          total_seconds=$(jq '.data.total_seconds' waka_response.json || true)
+          if [ -z "$total_seconds" ] || [ "$total_seconds" = "null" ]; then
+            echo "Failed to read total_seconds from WakaTime response"
+            cat waka_response.json
+            exit 1
+          fi
+          if [ "$total_seconds" -eq 0 ]; then
+            echo "No WakaTime coding data available yet."
+            exit 0
+          fi
+          jq -r --argjson total "$total_seconds" '.data.languages | sort_by(-.total_seconds) | .[] | "- \(.name) — \((.total_seconds / $total) * 100 | floor)% (\((.total_seconds / 3600) | floor)h \((.total_seconds % 3600) / 60 | floor)m)"' waka_response.json > waka_lines.txt
+
+      - name: Update README section
+        run: |
+          python3 <<'PY'
+from pathlib import Path
+path = Path('README.md')
+section = Path('waka_lines.txt').read_text().strip()
+text = path.read_text()
+start = '<!--START_SECTION:waka-->'
+end = '<!--END_SECTION:waka-->'
+if start not in text or end not in text:
+    raise SystemExit('README markers not found')
+before, _, rest = text.partition(start)
+_, _, after = rest.partition(end)
+new_content = before + start + '\n' + section + '\n' + end + after
+path.write_text(new_content)
+PY
+
+      - name: Commit and push README changes
+        if: steps.update-readme.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH_NAME: ${{ github.ref_name }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet README.md; then
+            echo 'README section already up to date.'
+            exit 0
+          fi
+          git add README.md
+          git commit -m 'Update WakaTime README stats'
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${REPOSITORY}.git" "HEAD:${BRANCH_NAME}"
