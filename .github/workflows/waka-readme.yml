@@ -43,20 +43,11 @@ jobs:
 
       - name: Update README section
         run: |
-          python3 <<'PY'
-from pathlib import Path
-path = Path('README.md')
-section = Path('waka_lines.txt').read_text().strip()
-text = path.read_text()
-start = '<!--START_SECTION:waka-->'
-end = '<!--END_SECTION:waka-->'
-if start not in text or end not in text:
-    raise SystemExit('README markers not found')
-before, _, rest = text.partition(start)
-_, _, after = rest.partition(end)
-new_content = before + start + '\n' + section + '\n' + end + after
-path.write_text(new_content)
-PY
+          awk -v new="$(cat waka_lines.txt)" '
+            /<!--START_SECTION:waka-->/ { print; print new; skip=1; next }
+            /<!--END_SECTION:waka-->/ { skip=0 }
+            !skip { print }
+          ' README.md > README.tmp && mv README.tmp README.md
 
       - name: Commit and push README changes
         if: steps.update-readme.outcome == 'success'
