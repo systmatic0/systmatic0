@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 
 <p>My name is Karl, I do product design and web development. On my journey, I've led design process for user-centric products and design systems.</p>
