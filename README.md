@@ -10,9 +10,9 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/bizarrelabs.one-1a1a2e?style=for-the-badge&logo=safari&logoColor=A78BFA)](https://bizarrelabs.one)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/karlsimmer)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:karlsimmer@gmail.com)
+<a href="https://bizarrelabs.one" target="_blank"><img src="https://img.shields.io/badge/bizarrelabs.one-1a1a2e?style=for-the-badge&logo=safari&logoColor=A78BFA" /></a>
+<a href="https://linkedin.com/in/karlsimmer" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:karlsimmer@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 </div>
 
@@ -26,10 +26,5 @@ Product Design   →   End-to-end UX from research to shipped product
 Design × Eng     →   Figma-to-code automation, React, HTML, CSS
 AI-augmented     →   Claude, Midjourney
 ```
-
-## This week I spent my time on
-
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
 
 ---
