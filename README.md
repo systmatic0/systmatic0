@@ -2,12 +2,11 @@
 
 
 <p>My name is Karl, I do product design and web development. On my journey, I've led design process for user-centric products and design systems.</p>
-<br/>
 <p>(Been designing for two <a href="https://www.lift99.co/walloffame" target="_blank">#EstonianMafia</a> startups.)</p>
 
 
 
-<br/>
+
 
 [![Portfolio](https://img.shields.io/badge/bizarrelabs.one-1a1a2e?style=for-the-badge&logo=safari&logoColor=A78BFA)](https://bizarrelabs.one)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/karlsimmer)
