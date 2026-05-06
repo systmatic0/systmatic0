@@ -1,8 +1,5 @@
 <div align="center">
 
-<img src="ascii-art-text.png" alt="Hello there, explorer!" />
-
-<br/> <br/>
 
 <p>My name is Karl, I do product design and web development. On my journey, I've led design process for user-centric products and design systems.</p>
 <br/>
