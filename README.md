@@ -36,3 +36,10 @@ Product Design   →   End-to-end UX from research to shipped product
 Design × Eng     →   Figma-to-code automation & handoff workflows
 AI-augmented     →   Claude, Midjourney
 ```
+
+## This week I spent my time on
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+---
